@@ -194,7 +194,7 @@ jobs:
             # TODO#16: build the Docker image tagged `my-app:latest`
             #          Hint: `docker build -t ...`
             - name: Build Docker Image
-              uses: docker build -t my-app:latest .
+              run: docker build -t my-app:latest .
 
             - name: Trivy Scan
               uses: aquasecurity/trivy-action@master
