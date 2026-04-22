@@ -64,7 +64,7 @@ jobs:
                 GITLEAKS_ENABLE_UPLOAD_ARTIFACT: true
                 GITLEAKS_ENABLE_SUMMARY: true
 
-    # GATE#1a: SAST via SonarQube 
+    # GATE#1a: SAST via SonarQube
     sast-scan:
         runs-on: ubuntu-latest
         needs: secret-scanning # this line means "you need to finish the secret-scanning job before starting this one (sast-scan)"
@@ -225,6 +225,6 @@ jobs:
               with:
                 name: trivy-sarif-report
                 path: trivy-results.sarif
-                
+
     # GATE#4: IaC scanning (Since there is no infrastructure cod here and it is out of scope for this class so we could skip it HELL YEAH!)
     # GATE#5: DAST (We have OWASP ZAP workshop here so we can skip this one too! YOHOOO!)
